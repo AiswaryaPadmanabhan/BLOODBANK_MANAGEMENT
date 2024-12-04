@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .xyz{
+          margin-bottom: 0px;
+          background-image: url('{% static "image/bloodbankbg2.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 700px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          color: white;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .banner {
+            background: url('{% static "image/bloodbankbg2.jpg" %}') no-repeat center center;
+            background-size: cover;
+            flex: 1; /* Makes the banner take up remaining vertical space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70vh; /* Increase this value to make the banner larger */
+            flex-grow: 1;
+            height: 100%;
+            position: relative;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+
+        }
+
+        .container {
+          position: relative;
+          height: 100vh; /* Full viewport height */
+          overflow: hidden;
+
+        }
+
+
+        /* Reset body and html margin/padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Full height for the viewport */
+        }
+        
+        
+        
+
+        .content-wrapper {
+            flex: 1; /* Ensures this takes up remaining space */
+        }
+
+        .banner-caption {
+             font-size: 2.5rem;
+             font-weight: bold;
+             text-align: center; /* Center the text */
+             margin: 0;
+             position: absolute;
+             top: 50%; /* Center vertically */
+             left: 40%; /* Center horizontally */
+             transform: translate(-50%, -50%); /* Translate to ensure perfect centering */
+             z-index: 1; /* Ensure the text is above other elements */
+             color: white;
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Add a shadow for readability */
+}
+
+        .banner h1 {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%;
+            transform: translate(-50%, -50%) translateY(20px); /* Center horizontally and move slightly downward */
+            margin: 0;
+            font-size: 36px;
+            z-index: 1; /* Ensure it's above other content */
+}
+
+      
+      </style>
+      
+</head>
+
+
+<body>
+  {% include "blood/navbar.html" %}
+<br>
+<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+  <div class="container">
+    <p class="banner-caption">DONATE BLOOD SAVE LIFE</p>
+</div>
+</section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+      
+      <br><br><br><br>
+      
+    </div>  
+  </section>
+    
+    
+  </div>
+  {% include "blood/footer.html" %}
+
+
+</body>
+
+</html>
